@@ -12,7 +12,7 @@ function performAction(e){
     const zip =  document.getElementById('zip').value;
     const content = document.getElementById('feelings').value;
 
-    getWeatherData(baseURL,zip, apiKey)
+    getWeatherData(baseURL, zip, apiKey)
         .then(function (data) {
             postData('/add', { temp: data.main.temp, date: newDate, content: content });
         })
